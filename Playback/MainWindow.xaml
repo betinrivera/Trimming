@@ -1,0 +1,30 @@
+﻿<Window x:Class="Playback.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Playback"
+        mc:Ignorable="d"
+        Title="Playback" Height="350" Width="526">
+    <Grid>
+        <Button x:Name="btnbuscar" Content="Examinar" HorizontalAlignment="Left" Margin="432,0,0,286" VerticalAlignment="Bottom" Width="75" Background="#FFF99393" BorderBrush="#FF812121" Click="btnbuscar_Click" Height="23"/>
+        <TextBox x:Name="txtruta" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="417"/>
+        <Button x:Name="btnplay" Content="Play" HorizontalAlignment="Left" Margin="9,106,0,0" VerticalAlignment="Top" Width="75" Click="btnplay_Click"/>
+        <Button x:Name="btnstop" Content="Stop" HorizontalAlignment="Left" Margin="197,106,0,0" VerticalAlignment="Top" Width="75" Click="btnstop_Click" IsEnabled="False"/>
+        <Slider x:Name="sldPosition" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" Width="417" Thumb.DragCompleted="sldPosition_DragCompleted" Thumb.DragStarted ="sldPosition_dragStarted"/>
+        <TextBlock x:Name="lblPosition" HorizontalAlignment="Left" Margin="10,58,0,0" TextWrapping="Wrap" Text="0:00" VerticalAlignment="Top"/>
+        <TextBlock x:Name="lblDuration" HorizontalAlignment="Left" Margin="405,55,0,0" TextWrapping="Wrap" Text="0:00" VerticalAlignment="Top"/>
+        <Button x:Name="btnPause" Content="Pause" HorizontalAlignment="Left" Margin="104,106,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="btnPause_Click"/>
+        <ComboBox x:Name="cbDispositivos" HorizontalAlignment="Left" Margin="10,79,0,0" VerticalAlignment="Top" Width="417"/>
+        <Slider x:Name="sldVolumen" HorizontalAlignment="Left" Margin="457,38,0,0" VerticalAlignment="Top" Width="22" Orientation="Vertical" Height="162" Maximum="1.5" Value="1" Thumb.DragCompleted="sldVolumen_DragCompleted" ValueChanged="sldVolumen_ValueChanged"/>
+        <Button x:Name="btnCortar" Content="Cortar" HorizontalAlignment="Left" Margin="9,131,0,0" VerticalAlignment="Top" Width="75" Click="btnCortar_Click"/>
+        <Button x:Name="btnCrearFrecuencia" Content="Crear Frecuencua" HorizontalAlignment="Left" Margin="104,131,0,0" VerticalAlignment="Top" Width="124" Click="btnCrearFrecuencia_Click"/>
+        <TextBox x:Name="txt_Frecuencia" HorizontalAlignment="Left" Height="23" Margin="25,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" TextChanged="txt_Frecuencia_TextChanged"/>
+        <Label x:Name="label" Content="Frecuencia" HorizontalAlignment="Left" Margin="25,160,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="Segundos" HorizontalAlignment="Left" Margin="135,160,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txt_Segundos" HorizontalAlignment="Left" Height="23" Margin="135,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" TextChanged="txt_Segundos_TextChanged"/>
+        <TextBox x:Name="txt_Archivo" HorizontalAlignment="Left" Height="23" Margin="250,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" TextChanged="txt_Archivo_TextChanged"/>
+        <Label x:Name="label2" Content="Archivo" HorizontalAlignment="Left" Margin="250,160,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
